@@ -1,16 +1,18 @@
 <head>
-	<title>Bay Area Rips</title>
+	<title>Bay Area Shop and Trade</title>
 </head>
 
 <body>
-	<h1>Bay Area Rips</h1>
+	<div id="content">
+	<h1>Bay Area Shop and Trade</h1>
 	{{> newPost}}
 	{{> allPosts}}
+	</div>
 </body>
 
 <template name="newPost">
-	<div id="new-post-form">
-		<h2>New Post</h2>
+	<div id="new-post-form" class="well">
+		<h2 id="newPostHead">New Post</h2>
 		<input id="name" type="text" placeholder="Name">
 		<textarea id="description" placeholder="Description"></textarea>
 		<textarea id="trade-for" placeholder="What are you willing to trade for?"></textarea>
@@ -19,7 +21,7 @@
 </template>
 
 <template name="postEntry">
-	<div id="{{ _id }}" class="post-entry">
+	<div id="{{ _id }}" class="post-entry well">
 		<h3 class="post-name">{{ name }}</h3>
 		<p class="post-description">Description: {{ description }}</p>
 		<p class="post-trade-for">Wants: {{ tradeFor }}</p>
@@ -49,7 +51,7 @@
 
 <template name="commentEntry">
 	<div class="comment-entry">
-		<span class="comment-name">{{ name }}</span>:
+		<span class="comment-name">{{ name }}</span>
 		<span class="comment-body">{{ body }}</span>
 	</div>
 </template>

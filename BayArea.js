@@ -30,7 +30,7 @@ if (Meteor.isClient) {
 
   Template.newComment.events({
     'keypress .new-comment-body': function(event) {
-      console.log("pressed muthafucking enter key");
+      console.log("pressed enter key");
       // if user pressed enter
       if (event.keyCode === 13) {
         var commentName = $(event.target).prev().val();

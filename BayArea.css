@@ -19,3 +19,20 @@ textarea {
 #submit {
 	width: 400px;
 }
+
+#content {
+	margin: 0 auto;
+	width: 500px;
+}
+
+#newPostHead {
+	text-align: center;
+}
+
+.comment-entry {
+	margin-left: 10px;
+}
+
+.comment-name {
+	font-weight: bold;
+}
