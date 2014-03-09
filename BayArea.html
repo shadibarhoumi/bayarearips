@@ -4,7 +4,10 @@
 
 <body>
 	<div id="content">
-	<h1>Bay Area Shop and Trade</h1>
+	<div class="jumbotron well">
+		<h1>Bay Area Shop and Trade</h1>
+		<p>Trade and swap your stuff!</p>
+	</div>
 	{{> newPost}}
 	{{> allPosts}}
 	</div>
@@ -25,9 +28,7 @@
 		<h3 class="post-name">{{ name }}</h3>
 		<p class="post-description">Description: {{ description }}</p>
 		<p class="post-trade-for">Wants: {{ tradeFor }}</p>
-		<!-- render all comments -->
 		{{> allComments}}
-		<!-- render new comment box -->
 		{{> newComment}}
 	</div>
 </template>
@@ -43,6 +44,7 @@
 
 <template name="allComments">
 	<div class="all-comments">
+		<h4>Comments</h4>
 		{{#each comments _id}}
 			{{> commentEntry }}
 		{{/each}}

@@ -1,3 +1,4 @@
+
 input, textarea {
 	display: block;
 }
@@ -33,6 +34,22 @@ textarea {
 	margin-left: 10px;
 }
 
+.new-comment {
+	margin-left: 10px;
+}
+
+.new-comment-name {
+	width: 100px;
+}
+
+.new-comment-body {
+	width: 300px;
+}
+
 .comment-name {
 	font-weight: bold;
+}
+
+.all-comments > h4 {
+	margin-top: 20px;
 }
