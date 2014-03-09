@@ -1,0 +1,62 @@
+<head>
+	<title>Bay Area Rips</title>
+</head>
+
+<body>
+	<h1>Bay Area Rips</h1>
+	{{> newPost}}
+	{{> allPosts}}
+</body>
+
+<template name="newPost">
+	<div id="new-post-form">
+		<h2>New Post</h2>
+		<input id="name" type="text" placeholder="Name">
+		<textarea id="description" placeholder="Description"></textarea>
+		<textarea id="trade-for" placeholder="What are you willing to trade for?"></textarea>
+		<button id="submit" class="btn btn-primary">Submit Post!</button>
+	</div>
+</template>
+
+<template name="postEntry">
+	<div id="{{ _id }}" class="post-entry">
+		<h3 class="post-name">{{ name }}</h3>
+		<p class="post-description">Description: {{ description }}</p>
+		<p class="post-trade-for">Wants: {{ tradeFor }}</p>
+		<!-- render all comments -->
+		{{> allComments}}
+		<!-- render new comment box -->
+		{{> newComment}}
+	</div>
+</template>
+
+<template name="allPosts">
+	<div id="all-posts">
+		<h2>All Posts</h2>
+		{{#each posts}}
+			{{> postEntry}}
+		{{/each}}
+	</div>
+</template>
+
+<template name="allComments">
+	<div class="all-comments">
+		{{#each comments _id}}
+			{{> commentEntry }}
+		{{/each}}
+	</div>
+</template>
+
+<template name="commentEntry">
+	<div class="comment-entry">
+		<span class="comment-name">{{ name }}</span>:
+		<span class="comment-body">{{ body }}</span>
+	</div>
+</template>
+
+<template name="newComment">
+	<div class="new-comment">
+		<input type="text" class="new-comment-name" placeholder="Name">
+		<input type="text" class="new-comment-body" placeholder="Comment">
+	</div>
+</template>

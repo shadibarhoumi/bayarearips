@@ -1,0 +1,21 @@
+input, textarea {
+	display: block;
+}
+
+textarea {
+	resize: none;
+}
+
+#name {
+	height: 30px;
+	width: 400px;
+}
+
+#description, #trade-for {
+	width: 400px;
+	height: 100px;
+}
+
+#submit {
+	width: 400px;
+}
